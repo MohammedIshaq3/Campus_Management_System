@@ -1,6 +1,6 @@
 package com.campus.model;
 
-public class Student {
+public abstract class Student {
     private int studentid;
     private String studentname;
     private int age;
@@ -17,7 +17,7 @@ public class Student {
     }
 
     //parameterized constructor
-    public Student(int Student, String studentname, int age, String department, int[] marks){
+    public Student(int studentid, String studentname, int age, String department, int[] marks){
         this.studentid = studentid;
         this.studentname = studentname;
         this.age = age;
@@ -69,12 +69,14 @@ public class Student {
         displayStudentInfo();
 
         if(showMarks){
-            System.out.println("Marks:" + java.util.Array.toString(marks));
+            System.out.println("Marks:" + java.util.Arrays.toString(marks));
 
         }
     }
+    //abstract method - no body, must be implemented in subclass
+    public abstract void studentType();
     // static method-belong to class, not to object
     public static void displayStudentCount(){
-        system.out.println("Total number of students:" + studentcount);
+        System.out.println("Total number of students:" + studentCount);
     }
 }

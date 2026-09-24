@@ -84,11 +84,15 @@ public class StudentService {
         }
         for (int mark : marks) {
             if (mark < 40) {
-                return "Pass";
-            }else {
                 return "Fail";
             }
+          
         }
+        return "Pass";
+    }
+    
+
+
         //display report card
         public void displayReportCard(Student student){
             System.out.println("Student ID: " + student.getStudentid());
@@ -111,4 +115,3 @@ public class StudentService {
     }
     }
 
-}
