@@ -11,8 +11,20 @@ public class ScholarshipStudent extends Student {
     public double getScholarshipAmount() {
         return scholarshipAmount;
     }
-    public void setScholarshipAmount(double scholarshipAmount) {
-        this.scholarshipAmount = scholarshipAmount;
+    public void setScholarshipPercentage(double scholarshipPercentage) {
+        this.scholarshipPercentage = scholarshipPercentage;
     }
-    
-    
+    @Override 
+    public void studentType() {
+        System.out.println("Scholarship Student");
+    }
+    @Override 
+    public void dispalyStudentInfo() {
+        super.dispalyStudentInfo();
+        System.out.println("Scholarship Percentage: " + scholarshipPercentage);
+    }
+    @Override 
+    public void dispalyStudentInfo(boolean showMarks) {
+        super.dispalyStudentInfo(showMarks);
+    }
+}
